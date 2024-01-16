@@ -1,5 +1,6 @@
 package Collections;
 
+import java.util.ArrayDeque;
 import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.PriorityQueue;
@@ -34,10 +35,42 @@ public class QueueInteface {
 		
 		System.out.println("********************************");
 		
-		Queue<String> pq=new PriorityQueue<String>(); 
-		pq.add("Alpha");
-		pq.add("Beta");
+		/*Queue<String> pq=new PriorityQueue<String>(); 
+		pq.add("Alpha");//Strings-> Lexicographic order
+		pq.add("Beta"); //integers -> Ascending order
 		pq.add("Charlie");
+		pq.offer("A");
+		pq.offer("A");
+		System.out.println("Size of PriorityQueue: "+pq.size());
+		System.out.println("Printing PriorityQueue Elements: "+pq);
+		System.out.println("Head of Queue: "+pq.peek());
+		
+		pq.remove();//removes element at the head of the queue
+		System.out.println("Size of PriorityQueue after removal: "+pq.size());
+		System.out.println("Printing PriorityQueue Elements after removal: "+pq);
+		
+		pq.offer("offerGamma"); //Adds an element to the rear of the queue
+		System.out.println("Size of PriorityQueue after 'offer': "+pq.size());
+		System.out.println("Printing PriorityQueue Elements after 'offer': "+pq);
+		
+		System.out.println(pq.poll());//Retrieves and removes the head of this queue. This head is no more after this
+		System.out.println("After poll:"+pq+" and size is: "+pq.size()+"\n");
+		
+		//To iterate through the the Queue
+		System.out.print("Iterating using Iterator: ");
+		Iterator<String> it=pq.iterator();
+		while(it.hasNext()) {
+			System.out.print(it.next()+" ");
+		}*/
+	
+		ArrayDeque<String> pq=new ArrayDeque<String>();
+		pq.add("Alpha");//Strings-> Lexicographic order
+		pq.add("Beta"); //integers -> Ascending order
+		pq.add("Charlie");
+		pq.offer("A");
+		pq.offer("A");
+		pq.offerFirst("Dequefirst");
+		pq.offerLast("DequeLast");
 		System.out.println("Size of PriorityQueue: "+pq.size());
 		System.out.println("Printing PriorityQueue Elements: "+pq);
 		System.out.println("Head of Queue: "+pq.peek());

@@ -12,11 +12,12 @@ public class ExceptionDemo {
 		int c=0;
 		
 		try {
-			//int k=b/c;
+			int k=b/c;
 			int ar[]=new int[5];
 			System.out.println(ar[7]);
 		}catch(ArithmeticException e) {//This means Arithematic exception and since the above error exception is Arithematic exception the control goes to this catch block
-			System.out.println("Arithematic Exception Error exception caught");
+			e.printStackTrace();//TO print a error line/exception explicitly 
+			System.err.println("Arithematic Exception Error exception caught");//prints in red colour for error
 		}
 		catch(IndexOutOfBoundsException e) {
 			System.out.println("Index Out Of Bounds Exception Error exception caught");

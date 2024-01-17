@@ -35,7 +35,7 @@ public class QueueInteface {
 		
 		System.out.println("********************************");
 		
-		/*Queue<String> pq=new PriorityQueue<String>(); 
+		Queue<String> pq=new PriorityQueue<String>(); 
 		pq.add("Alpha");//Strings-> Lexicographic order
 		pq.add("Beta"); //integers -> Ascending order
 		pq.add("Charlie");
@@ -61,36 +61,38 @@ public class QueueInteface {
 		Iterator<String> it=pq.iterator();
 		while(it.hasNext()) {
 			System.out.print(it.next()+" ");
-		}*/
-	
-		ArrayDeque<String> pq=new ArrayDeque<String>();
-		pq.add("Alpha");//Strings-> Lexicographic order
-		pq.add("Beta"); //integers -> Ascending order
-		pq.add("Charlie");
-		pq.offer("A");
-		pq.offer("A");
-		pq.offerFirst("Dequefirst");
-		pq.offerLast("DequeLast");
-		System.out.println("Size of PriorityQueue: "+pq.size());
-		System.out.println("Printing PriorityQueue Elements: "+pq);
-		System.out.println("Head of Queue: "+pq.peek());
+		}
+		System.out.println();
+		System.out.println("******************************************");
 		
-		pq.remove();//removes element at the head of the queue
-		System.out.println("Size of PriorityQueue after removal: "+pq.size());
-		System.out.println("Printing PriorityQueue Elements after removal: "+pq);
+		ArrayDeque<String> ad=new ArrayDeque<String>();//NOT USUALLY ASKED IN INTERVIEW
+		ad.add("Alpha");//Strings-> Lexicographic order
+		ad.add("Beta"); //integers -> Ascending order
+		ad.add("Charlie");
+		ad.offer("A");
+		ad.offer("A");
+		ad.offerFirst("Dequefirst");
+		ad.offerLast("DequeLast");
+		System.out.println("Size of PriorityQueue: "+ad.size());
+		System.out.println("Printing PriorityQueue Elements: "+ad);
+		System.out.println("Head of Queue: "+ad.peek());
 		
-		pq.offer("offerGamma"); //Adds an element to the rear of the queue
-		System.out.println("Size of PriorityQueue after 'offer': "+pq.size());
-		System.out.println("Printing PriorityQueue Elements after 'offer': "+pq);
+		ad.remove();//removes element at the head of the queue
+		System.out.println("Size of PriorityQueue after removal: "+ad.size());
+		System.out.println("Printing PriorityQueue Elements after removal: "+ad);
 		
-		System.out.println(pq.poll());//Retrieves and removes the head of this queue. This head is no more after this
-		System.out.println("After poll:"+pq+" and size is: "+pq.size()+"\n");
+		ad.offer("offerGamma"); //Adds an element to the rear of the queue
+		System.out.println("Size of PriorityQueue after 'offer': "+ad.size());
+		System.out.println("Printing PriorityQueue Elements after 'offer': "+ad);
+		
+		System.out.println(ad.poll());//Retrieves and removes the head of this queue. This head is no more after this
+		System.out.println("After poll:"+ad+" and size is: "+ad.size()+"\n");
 		
 		//To iterate through the the Queue
 		System.out.print("Iterating using Iterator: ");
-		Iterator<String> it=pq.iterator();
-		while(it.hasNext()) {
-			System.out.print(it.next()+" ");
+		Iterator<String> t=ad.iterator();
+		while(t.hasNext()) {
+			System.out.print(t.next()+" ");
 		}
 	}
 

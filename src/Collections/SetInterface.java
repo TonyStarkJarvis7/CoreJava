@@ -49,6 +49,7 @@ public class SetInterface {
         while(i.hasNext()) {
         	System.out.println(i.next());
         }
+        
         System.out.println("****************************************");
         
         Set<String> lhs=new LinkedHashSet<String>();//stores data in an orderedformat. based on the order of insertion

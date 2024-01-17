@@ -1,6 +1,8 @@
 package Collections;
 
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
 import java.util.Iterator;
 
 public class ArrayListClass {
@@ -28,7 +30,28 @@ public class ArrayListClass {
 			System.out.print(s+" ");
 		}
 		
+		System.out.println();
+		System.out.println("Using iterator to print below:");
 		Iterator<String> it=al.iterator();
+		while(it.hasNext()) {
+			System.out.print(it.next()+" ");
+		}
+		
+		System.out.println();
+		System.out.println("Using for loop to print ArrayList below:");
+		for(int i=0;i<al.size();i++) {
+			System.out.print(al.get(i)+"-");
+		}
+		System.out.println("\n");
+		ArrayList<Integer> ali=new ArrayList<Integer>();
+		ali.add(5);
+		ali.add(6);
+		ali.add(1);
+		ali.add(0);
+		ali.add(4);
+		System.out.println("Before sorting:"+ali);
+		Collections.sort(ali);
+		System.out.println("After sorting:"+ali);
 		
 	}
 
